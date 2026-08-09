@@ -199,4 +199,9 @@
     font-size: 11px !important;
     line-height: 1.4 !important;
   }
+  .magic-bento-card {
+    min-height: 160px !important;
+    padding: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
 }
