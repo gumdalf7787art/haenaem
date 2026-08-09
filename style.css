@@ -405,6 +405,7 @@ body {
     .hamburger { display: block; }
     
     .mobile-br { display: block; }
+    .desktop-only { display: none; }
     
     .nav-links {
         display: none;
