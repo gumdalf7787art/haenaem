@@ -1,0 +1,202 @@
+:root {
+  --purple-glow: rgba(132, 0, 255, 0.2);
+  --border-color: #2F293A;
+  --background-dark: #120F17;
+}
+
+.bento-section {
+  position: relative;
+  user-select: none;
+}
+
+.magic-bento-grid {
+  display: grid;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 599px) {
+  .magic-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .magic-bento-card {
+    min-height: 220px;
+    padding: 1rem;
+  }
+  .card-img {
+    max-width: 100px;
+  }
+}
+@media (min-width: 600px) {
+  .magic-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .magic-bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .magic-bento-grid > :nth-child(1) { grid-column: span 2; }
+  .magic-bento-grid > :nth-child(2) { grid-column: span 2; }
+  .magic-bento-grid > :nth-child(3) { grid-column: span 2; }
+  .magic-bento-grid > :nth-child(4) { grid-column: span 2; }
+}
+
+.magic-bento-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 340px;
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--background-dark);
+  font-weight: 300;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 200px;
+  --glow-color: 132, 0, 255;
+}
+
+.magic-bento-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.magic-bento-card--border-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.8)) 0%,
+    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.magic-bento-card--border-glow:hover {
+  box-shadow:
+    0 4px 20px rgba(46, 24, 78, 0.4),
+    0 0 30px var(--purple-glow);
+}
+
+.particle-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(132, 0, 255, 1);
+  box-shadow: 0 0 6px rgba(132, 0, 255, 0.6);
+  pointer-events: none;
+}
+
+.global-spotlight {
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle,
+    rgba(132, 0, 255, 0.15) 0%,
+    rgba(132, 0, 255, 0.08) 15%,
+    rgba(132, 0, 255, 0.04) 25%,
+    rgba(132, 0, 255, 0.02) 40%,
+    rgba(132, 0, 255, 0.01) 65%,
+    transparent 70%
+  );
+  z-index: 200;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  will-change: transform, opacity, left, top;
+}
+
+/* Card Content Styling */
+.card-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 100%;
+  max-width: 170px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.5s ease;
+}
+
+.magic-bento-card:hover .card-img {
+  transform: scale(1.05) translateZ(20px);
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card-text h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.card-text p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .card-text h3 {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+    letter-spacing: -0.02em !important;
+  }
+  .card-text p {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+}

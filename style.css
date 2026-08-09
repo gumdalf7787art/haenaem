@@ -1,0 +1,480 @@
+/* 
+  Apple Design System Inspired Variables 
+  Extracted from DESIGN-a.md 
+*/
+:root {
+    /* Colors */
+    --primary: #0066cc;
+    --ink: #1d1d1f;
+    --body-on-dark: #ffffff;
+    --ink-muted-80: #333333;
+    --ink-muted-48: #7a7a7a;
+    --hairline: #e0e0e0;
+    --canvas: #ffffff;
+    --canvas-parchment: #f5f5f7;
+    --surface-tile-1: #272729;
+    --surface-black: #000000;
+    
+    /* Typography */
+    --font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 17px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-section: 80px;
+
+    /* Radii */
+    --rounded-lg: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--ink);
+    background-color: var(--canvas);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.47;
+    font-size: 17px;
+    letter-spacing: -0.374px;
+}
+
+/* Typography Classes */
+.display-title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07;
+    letter-spacing: -0.28px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.display-lg {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em; /* Apple tight emulation */
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+    margin-bottom: var(--spacing-xxl);
+    text-align: center;
+}
+
+.tagline {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.19;
+    letter-spacing: 0.231px;
+}
+
+.lead-airy {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Layout Utilities */
+.section {
+    padding: var(--spacing-section) 0;
+    overflow: hidden;
+    scroll-margin-top: 100px;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Surface Modes */
+.dark-tile {
+    background-color: var(--surface-black);
+    color: var(--body-on-dark);
+}
+
+.light-tile {
+    background-color: var(--canvas);
+    color: var(--ink);
+}
+
+.parchment-tile {
+    background-color: var(--canvas-parchment);
+    color: var(--ink);
+}
+
+/* Global Nav Header (Floating Pill) */
+.global-nav {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    height: 64px;
+    background: linear-gradient(90deg, rgba(15, 10, 60, 0.85) 0%, rgba(20, 50, 200, 0.85) 50%, rgba(15, 10, 60, 0.85) 100%);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--body-on-dark);
+    gap: 8px;
+}
+
+.brand-logo {
+    height: 24px;
+    width: auto;
+}
+
+.brand-text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.12px;
+}
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 100px;
+}
+
+.hero-image-container {
+    margin-top: auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 60%; /* Reduced size by 40% */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    /* Apple's single signature product shadow */
+    filter: drop-shadow(3px 5px 30px rgba(255, 255, 255, 0.1));
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.about-image-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: grayscale(80%);
+    opacity: 0.9;
+    /* Soft shadow on white/parchment surfaces */
+    box-shadow: 3px 5px 30px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* Products Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.utility-card {
+    background-color: var(--canvas);
+    border: 1px solid var(--hairline);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--canvas-parchment);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: var(--ink-muted-80);
+}
+
+/* Portfolio Tiles */
+.portfolio-tile {
+    padding: var(--spacing-section);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-top: 40px;
+    border-radius: 8px;
+    /* Soft shadow on white/parchment surfaces */
+    box-shadow: 3px 5px 30px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* Workflow */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.workflow-item h3 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 8px;
+}
+
+.workflow-item ul {
+    list-style: none;
+}
+
+.workflow-item li, .workflow-item p {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--ink-muted-80);
+}
+
+/* Footer */
+.footer {
+    padding: 64px var(--spacing-lg) 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.dense-link {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2.41;
+    color: var(--ink-muted-80);
+}
+
+.fine-print {
+    font-size: 12px;
+    color: var(--ink-muted-80);
+    line-height: 1.5;
+}
+
+.footer-legal {
+    border-top: 1px solid var(--hairline);
+    padding-top: 20px;
+}
+
+.micro-legal {
+    font-size: 10px;
+    color: var(--ink-muted-48);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 4px;
+}
+
+.mobile-br {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    
+    .mobile-br { display: block; }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background: rgba(15, 10, 60, 0.95);
+        backdrop-filter: blur(12px);
+        padding: 20px;
+        border-radius: 16px;
+        flex-direction: column;
+        min-width: 160px;
+        text-align: right;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+    .nav-links.active { display: flex; }
+    
+    .display-title { font-size: 36px; }
+    .display-xl { font-size: 44px !important; }
+    .display-lg { font-size: 28px !important; }
+    .section-title { font-size: 28px; margin-bottom: 32px; }
+    
+    .section { padding: 50px 0; }
+    .container { padding: 0 16px; }
+    
+    .hero { padding-top: 100px; min-height: auto; padding-bottom: 10px; }
+    #products { padding-top: 20px; }
+    .hero-content { margin-top: 40px; }
+    .hero-subtitle { font-size: 16px; padding: 0 20px; }
+    .hero-image-container { margin-top: 4px; }
+    .hero-image { width: 95%; margin-top: 0; }
+    
+    .global-nav { width: 95%; height: 56px; top: 12px; }
+    .nav-container { padding: 0 16px; }
+    .nav-links a { font-size: 15px; }
+    .brand-text { font-size: 13px; }
+    
+    .lead-airy { font-size: 17px !important; margin-bottom: 16px !important; }
+    
+    .workflow-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
+    .workflow-step { margin-bottom: 32px; }
+    
+    .about-image-container { margin-top: 32px; width: 100% !important; max-width: 100% !important; aspect-ratio: 1 / 1 !important; }
+    
+    .footer { padding-top: 40px; padding-bottom: 30px; }
+    .footer > .container > div { flex-direction: column !important; gap: 32px !important; align-items: flex-start !important; text-align: left !important; }
+    .footer > .container > div > div { text-align: left !important; }
+    
+    #about div[style*="font-size: 26px"] {
+        font-size: 20px !important;
+        gap: 12px !important;
+        flex-wrap: wrap;
+    }
+    
+    #portfolio-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin-top: 32px !important;
+    }
+    #portfolio-grid > div {
+        padding: 12px !important;
+        border-radius: 12px !important;
+    }
+    #portfolio-grid h4 {
+        font-size: 14px !important;
+        margin-bottom: 6px !important;
+    }
+    #portfolio-grid p {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+    }
+}

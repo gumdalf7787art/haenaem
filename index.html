@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해냄 기공소 | haenaem</title>
+    <meta name="description" content="예술과 정밀함의 경계. 타협 없는 퀄리티를 제공하는 치기공사 해냄(haenaem) 기공소입니다.">
+    <!-- Pretendard Font (Free, replaces Apple SD Gothic Neo) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="magic-bento.css">
+    <link rel="stylesheet" href="profile-card.css">
+    <link rel="stylesheet" href="gradient-text.css">
+</head>
+<body>
+    <!-- Global Nav (Header) -->
+    <header class="global-nav">
+        <div class="nav-container">
+            <a href="#" class="brand" style="display: flex; align-items: center; gap: 4px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15.5 3c-1.5 0-2.8 1.1-3.5 2.5C11.3 4.1 10 3 8.5 3 6.5 3 5 4.5 5 6.5v3c0 2.5-1.5 4.5-1.5 7 0 1.5 1.3 2.5 2.8 2.5 1 0 2-.8 2.5-1.7l1-2c.3-.6 1.1-.6 1.4 0l1 2c.5.9 1.5 1.7 2.5 1.7 1.5 0 2.8-1 2.8-2.5 0-2.5-1.5-4.5-1.5-7v-3C18 4.5 16.5 3 15.5 3Z"/>
+                </svg>
+                <span class="brand-text">Haenaem 해냄 치기공소</span>
+            </a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <nav class="nav-links">
+                <a href="#hero" onclick="document.querySelector('.nav-links').classList.remove('active')">Home</a>
+                <a href="#products" onclick="document.querySelector('.nav-links').classList.remove('active')">주요보철물</a>
+                <a href="#about" onclick="document.querySelector('.nav-links').classList.remove('active')">해냄소개</a>
+                <a href="#workflow" onclick="document.querySelector('.nav-links').classList.remove('active')">의뢰안내</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section hero dark-tile">
+        <div id="magic-rings-container"></div>
+        <div class="hero-content">
+            <h1 class="display-xl text-reveal">자연치, <br>그 이상의 가치.</h1>
+            <p class="hero-subtitle fade-in" style="margin-top: 24px;">원장님의 정밀한 치료를 완벽하게 실현하는 해냄 치기공소입니다.</p>
+        </div>
+        <div class="hero-image-container fade-in">
+            <!-- Image will be inserted here -->
+            <img src="hero_transparent.png" alt="Zirconia Crown Macro" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Section 2: Products -->
+    <section id="products" class="section products dark-tile bento-section" style="padding-top: 100px; padding-bottom: 100px;">
+        <div class="container fade-in">
+            <h2 class="display-lg" style="text-align: center; margin-bottom: 60px;">주요 보철물</h2>
+            <div class="magic-bento-grid">
+                
+                <div class="magic-bento-card magic-bento-card--border-glow">
+                    <div class="particle-container"></div>
+                    <div class="card-content">
+                        <div class="card-img-wrapper">
+                            <img src="card1.png" class="card-img" alt="심미 보철 (Aesthetics)">
+                        </div>
+                        <div class="card-text">
+                            <h3>심미 보철 (Aesthetics)</h3>
+                            <p>지르코니아(Zirconia), 이맥스(E.max), 라미네이트 등. 자연스러운 빛의 투명도를 재현합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="magic-bento-card magic-bento-card--border-glow">
+                    <div class="particle-container"></div>
+                    <div class="card-content">
+                        <div class="card-img-wrapper">
+                            <img src="card2.png" class="card-img" alt="임플란트 보철 (Implants)">
+                        </div>
+                        <div class="card-text">
+                            <h3>임플란트 보철 (Implants)</h3>
+                            <p>커스텀 어버트먼트, 임플란트 상부 보철. 환자의 잇몸 라인에 완벽히 맞춘 흔들림 없는 정밀도.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="magic-bento-card magic-bento-card--border-glow">
+                    <div class="particle-container"></div>
+                    <div class="card-content">
+                        <div class="card-img-wrapper">
+                            <img src="card3.png" class="card-img" alt="일반 기공 (General)">
+                        </div>
+                        <div class="card-text">
+                            <h3>일반 기공 (General)</h3>
+                            <p>PFM, PFG, 골드 크라운, 인레이 등 10년 이상의 노하우가 담긴 견고한 핏.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="magic-bento-card magic-bento-card--border-glow">
+                    <div class="particle-container"></div>
+                    <div class="card-content">
+                        <div class="card-img-wrapper">
+                            <img src="card4.png" class="card-img" alt="특수/디지털 보철">
+                        </div>
+                        <div class="card-text">
+                            <h3>특수/디지털 보철</h3>
+                            <p>구강 스캐너 데이터를 완벽하게 활용하는 100% 디지털 모델리스(Model-less) 솔루션.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: About Us -->
+    <section id="about" class="section about parchment-tile">
+        <div class="container fade-in">
+            <h2 class="section-title" style="margin-bottom: 16px;">해냄 소개</h2>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 32px; font-size: 26px; letter-spacing: -0.5px;">
+                <span class="animated-gradient-text" style="background-image: linear-gradient(to right, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa);">20년 임상</span>
+                <span style="color: #ccc;">|</span>
+                <span class="animated-gradient-text" style="background-image: linear-gradient(to right, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa);">타협없는 퀄리티</span>
+            </div>
+
+            <h3 class="display-lg" style="font-size: 30px; margin-bottom: 24px;">"환자의 자연치와 가장 유사한<br class="mobile-br"> 형태와 기능을 구현합니다."</h3>
+            <p class="lead-airy" style="font-size: 19px; margin-bottom: 24px;">안녕하세요. 해냄 치기공소 대표 장경순 입니다.<br>20년 이상의 임상 노하우와<br class="mobile-br"> 심미 보철에 대한 끊임없는 연구를 바탕으로<br>단순한 기공물을 넘어선 '작품'을 만듭니다.</p>
+            <p class="lead-airy" style="font-size: 19px;">원장님의 정확한 진단을 가장 완벽한 형태로 현실화하기 위해<br>타협 없는 퀄리티와 투명한 소통을 약속드립니다.</p>
+            <div class="about-image-container" style="width: 80%; margin: 40px auto 0 auto; max-width: 800px; aspect-ratio: 1.778;">
+                <div id="about-profile-card" style="width: 100%; height: 100%;"></div>
+            </div>
+            
+            <div id="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; text-align: left;">
+                <div style="background: rgba(0, 0, 0, 0.03); padding: 24px; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="portfolio1.png" alt="전치부 심미보철" style="width: 100%; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/9; object-fit: cover;">
+                    <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">자연치를 넘어서는 빛.</h4>
+                    <p style="color: var(--ink-light); font-size: 16px; line-height: 1.5;">전치부 심미보철: 완벽한 쉐이드 매칭과 잇몸과의 조화.</p>
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.03); padding: 24px; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.05);">
+                    <img src="portfolio2.png" alt="구치부 임플란트" style="width: 100%; border-radius: 12px; margin-bottom: 20px; aspect-ratio: 16/9; object-fit: cover;">
+                    <h4 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">흔들림 없는 기초.</h4>
+                    <p style="color: var(--ink-light); font-size: 16px; line-height: 1.5;">구치부 임플란트: 풀 지르코니아 밀링과 정밀한 교합면 설계.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Workflow -->
+    <section id="workflow" class="section workflow light-tile">
+        <div class="container text-center fade-in">
+            <h2 class="section-title" style="margin-bottom: 24px;">의뢰 안내</h2>
+            <h3 class="display-lg" style="font-size: 30px; margin-bottom: 16px;">정확한 납기, 투명한 소통.</h3>
+            <p class="lead-airy" style="font-size: 19px;">접수부터 완성까지,<br class="mobile-br"> 단 하나의 오차도 허용하지 않는 체계적인 프로세스.</p>
+            
+            <div style="margin-top: 32px; background: rgba(0, 0, 0, 0.03); padding: 24px; border-radius: 16px; display: inline-block; border: 1px solid rgba(0, 0, 0, 0.05);">
+                <p style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--ink);">상담 및 의뢰 문의</p>
+                <p style="font-size: 28px; font-weight: 700; color: #4079ff; letter-spacing: -0.5px; margin-bottom: 4px;">010-9363-7180</p>
+                <p style="font-size: 16px; color: var(--ink-light);">haenaem@example.com</p>
+            </div>
+
+            <div class="grid grid-3" style="margin-top: 60px;">
+                <div class="workflow-step">
+                    <div class="step-number">01</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">정밀 진단 및 모델링</h3>
+                    <p style="color: var(--ink-light);">원내 스캔 데이터 또는 인상을 바탕으로<br class="mobile-br"> 최적의 보철물 디자인을 스케치합니다.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">02</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">첨단 밀링 & 수작업 빌드업</h3>
+                    <p style="color: var(--ink-light);">초정밀 밀링 장비와 장인의 수작업을 결합하여<br class="mobile-br"> 완벽한 적합도와 심미성을 구현합니다.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">03</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">최종 검수 및 안전 배송</h3>
+                    <p style="color: var(--ink-light);">교합, 컨택, 마진을 3중 검수 후 가장 안전하게 원장님께 전달됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Footer -->
+    <footer class="footer dark-tile" id="footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
+                <div>
+                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 8px; color: #fff;">Haenaem.</h2>
+                    <p style="font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 16px;">해냄 치기공소</p>
+                    <p style="color: #a0a0a0; margin-bottom: 8px;">완벽을 향한 타협 없는 고집.</p>
+                </div>
+                <div style="text-align: right; color: #a0a0a0;">
+                    <p style="margin-bottom: 8px;">서울특별시 노원구 수락산로 9, 4층 해냄 치기공소</p>
+                    <p style="margin-bottom: 8px;">T. 010-9363-7180 | E. info@haenaem.com</p>
+                    <p style="font-size: 14px; margin-top: 24px; opacity: 0.6;">&copy; 2026 Haenaem Dental Laboratory. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="magic-rings.js"></script>
+    <script src="magic-bento.js"></script>
+    <script src="profile-card.js"></script>
+    <script>
+        // Profile Card Init
+        document.addEventListener("DOMContentLoaded", () => {
+            initProfileCard('about-profile-card', {
+                avatarUrl: 'about.png',
+                showUserInfo: false
+            });
+        });
+
+        // Simple fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
